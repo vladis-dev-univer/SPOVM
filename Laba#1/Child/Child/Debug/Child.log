@@ -1,0 +1,3 @@
+﻿  SourceChild.cpp
+d:\spovm_prj\laba#1\child\child\sourcechild.cpp(14): warning C4101: 'ppid': unreferenced local variable
+  Child.vcxproj -> D:\SPOVM_PRJ\Laba#1\Child\Debug\Child.exe
