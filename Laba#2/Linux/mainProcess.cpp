@@ -3,7 +3,9 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <iostream>
+#include <string.h>
 #include <vector>
+#include <unistd.h>
 #include <signal.h>
 #include <ncurses.h>
 
@@ -75,8 +77,15 @@ int main(int argc, char *argv[])
         }
         break;
         }
-        cout << "Number of the processes: " << pids.size() << "\n\r"
+        char str[] = "Number of the processes: ";
+        for (int i = 0; i < strlen(str); i++)
+        {
+            usleep(20000);
+            printf("%c", str[i]);
+        }
+        cout << pids.size() << "\n\r"
              << "\n\r";
+        usleep(10000);
         for (int i = 0; i < pids.size(); i++)
         {
             kill(pids[i], SIGUSR1);   // посылка сигнала процессу
