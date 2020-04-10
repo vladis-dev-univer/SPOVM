@@ -18,10 +18,8 @@ int main(int argc, char *argv[])
   while (true)
   {
     sigwait(&set, &reciever); //ждём сигнала
-    cout << "\nThis is process (" << getpid() << ")"
-         << "\r";
-    cout << "--------------------"
-         << "\n\r";
+    cout << "\nThis is process (" << getpid() << ")"<< "\n\r";
+    cout << "--------------------"<< "\n\r";
     kill(getppid(), SIGUSR2); // посылка сигнала процессу
     sleep(1);
   }
