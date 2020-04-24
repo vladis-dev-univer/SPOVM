@@ -8,6 +8,8 @@ int main(int argc, char *argv[])
     int pid;
     string choice = " ";
     key = shmget(UNIQENUMBER, SHMSIZE, 0666 | IPC_CREAT); // инициализация sharedMemory
+	//0666 устанавливает права доступа для сегмента памяти, 
+	//а IPC_CREAT говорит системе создать новый сегмент памяти для разделяемой памяти.
     if ((shm = (char *)shmat(key, (void *)0, 0)) == (char *)(-1))
     { // подключение sharedMemory к адресному пространству вызывающего процесса
         printf("Can't attach shared memory\n");
@@ -39,11 +41,6 @@ int main(int argc, char *argv[])
                     cin >> choice;
                 }
             }
-            // do
-            // {
-            //     fflush(stdin);
-            //     cin >> choice;
-            // } while (choice < 0 || choice > 1);
             if (choice == "1")
             {
                 kill(pid, SIGTERM); // поылаем сигнал для запроса завершения процесса.
@@ -71,8 +68,8 @@ int main(int argc, char *argv[])
 
 void client(char *sharedMemory, int key)
 {
-    key = shmget(UNIQENUMBER, SHMSIZE, 0);                                              // получение интендифекатора на sharedMemory
-    sharedMemory = (char *)shmat(key, (void *)0, 0);                                    // получение указателя на sharedMemory
+    key = shmget(UNIQENUMBER, SHMSIZE, 0);   // получение интендифекатора на sharedMemory
+    sharedMemory = (char *)shmat(key, (void *)0, 0);     // получение указателя на sharedMemory
     printf("Child wrote [PID: %d][PPID: %d]: %s\n", getpid(), getppid(), sharedMemory); // вывод сообщения, которое записал пользователь в клентском процессе
-    shmdt(sharedMemory);                                                                // отключение сегмента sharedMemory
+    shmdt(sharedMemory);                                   // отключение сегмента sharedMemory
 }
