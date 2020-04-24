@@ -15,3 +15,4 @@
 #### Видеодемонстрация (Windows):
 <https://youtu.be/VsiYJwed9fo>
 #### Видеодемонстрация (Linux):
+<https://youtu.be/Gnz6HCGz0FI>
