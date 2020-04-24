@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -12,6 +12,7 @@
 
 using namespace std;
 
+//константы:
 namespace constants
 {
 	const int kMaxSize = 100;
