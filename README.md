@@ -26,5 +26,6 @@
 <https://youtu.be/uw54Zy5rnJk>
 #### Видеодемонстрация (Linux):
 <https://youtu.be/DUj87fKl-Ls>
-**p.s. чтобы собрать проект в linux: g++ -pthread prog.cpp
+
+   *p.s. чтобы собрать проект в linux: g++ -pthread prog.cpp
 
