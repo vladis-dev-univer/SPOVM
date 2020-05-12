@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  dllmain.cpp
+  fileio.cpp
+     Creating library D:\VS 2017(Project)\Laba_5(4sem)\Release\fileio.lib and object D:\VS 2017(Project)\Laba_5(4sem)\Release\fileio.exp
+  Generating code
+  All 3 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  fileio.vcxproj -> D:\VS 2017(Project)\Laba_5(4sem)\Release\fileio.dll
