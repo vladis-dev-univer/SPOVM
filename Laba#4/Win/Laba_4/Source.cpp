@@ -31,7 +31,7 @@ int main() {
 		userChoice = _getch();
 		if (userChoice == 'q') {
 			for (size_t i = 0; i < id; i++) {
-				TerminateThread(threads[id - 1], 0); // удаляем все потоки
+				TerminateThread(threads[i], 0); // удаляем все потоки
 			}
 			DeleteCriticalSection(&criticalSection); //убераем критическую секцию
 			id = NULL;
