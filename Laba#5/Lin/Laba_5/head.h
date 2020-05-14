@@ -11,7 +11,7 @@
 #include <dirent.h>
 #include <unistd.h>
 #include <inttypes.h>
-#include <dlfcn.h>
+#include <dlfcn.h>	//библиот. для dll
 
 #include <sys/wait.h>
 

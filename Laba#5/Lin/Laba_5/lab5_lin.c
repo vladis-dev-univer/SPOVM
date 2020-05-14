@@ -1,7 +1,7 @@
 #include "head.h"
 
-int w = 0;                          //логический указатель на для записи (1 - пишет, 0 - ожидает)
-int r = 0;                          //логический указатель на для чтения (1 - читает, 0 - ожидает)
+int w = 0;                          //логический указатель для записи (1 - пишет, 0 - ожидает)
+int r = 0;                          //логический указатель для чтения (1 - читает, 0 - ожидает)
 int size = 0;                       //счетчик прочитанных файлов
  
 struct Data {
@@ -119,7 +119,7 @@ void* ThreadWriter(void* fdata) {
 
 
 void CreateThreads(struct Data *data) {         //ф-ия создания потоков
-	library_handler = dlopen("./libj", RTLD_LAZY);  //получаем указатель на dll
+	library_handler = dlopen("./libj", RTLD_LAZY);  //получаем указатель на dll(загружаем)
 	
 	if (!library_handler) {                     //если dll не удалось открыть,
         fputs (dlerror(), stderr);              //то выводим сообщение об ошибке и

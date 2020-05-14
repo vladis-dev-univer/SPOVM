@@ -29,6 +29,6 @@ void ReadFromFile(int hFile, char* buff) {
 		memset(temp, 0, BUFFER_SIZE * sizeof(char));        //очищаем фременный буфер
 
 		n = read(hFile, temp, sizeof(char));                //читаем из файла в буфер
-		strcat(buff, temp);                                 //конкатинируем буфер с временным буфером
+		strcat(buff, temp);                                 //конкатинируем буфер с временным буфером (объединяем)
 	} while (n != 0);                                       //читаем пока не кончится файл
 }
